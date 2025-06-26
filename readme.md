@@ -1,6 +1,6 @@
 # Workshop - Spring Modulith Musikdatenbank
 
-Das ist der erste Workshop für die Auswertung des Mental Workload auf die Entwickler bei der Entwicklung mit und ohne Spring Modulith. In diesem Workshop wird der unten beschriebene Use Case mit Spring Boot implementiert.
+Das ist der zweite Workshop für die Auswertung des Mental Workload auf die Entwickler bei der Entwicklung mit und ohne Spring Modulith. In diesem Workshop wird der unten beschriebene Use Case mit [Spring Modulith](https://docs.spring.io/spring-modulith/reference/index.html) und [JMolecules](https://github.com/xmolecules/jmolecules) implementiert.
 
 ## Use Case
 
@@ -20,6 +20,7 @@ Beim Löschen eines Songs, Albums oder Künstlers dürfen keine weiteren Daten g
 
 Die drei APIs `albums.AlbumAPI`, `artists.ArtistAPI` und `songs.SongAPI` müssen implementiert werden. Um sicherzustellen, dass alle APIs korrekt implementiert wurden, müssen alle Tests erfolgreich durchlaufen.
 
+Für diese Aufgabe darf die Kommunikation zwischen den Modulen nur asynchron ablaufen.
 ## Spring Modulith
 
 Spring Modulith ist ein Toolkit, um modulare Anwendungen nach DDD zu bauen. Dabei wird ein großer Fokus auf das Vermeiden von Zyklen und die Verwendung von asynchroner, eventgetriebener Kommunikation gesetzt.
@@ -117,6 +118,7 @@ Da JMolecules ByteBuddy benutzt, um die JMolecules Annotationen in Spring Annota
 Dafür muss die Run Config Template für JUnit angepasst werden. Es muss die Before Launch Einstellung aktiviert und der `clean` und `byte-buddy:transform-extended` Goal hinzugefügt werden.
 
 ![run_configuration_template.png](run_configuration_template.png)
+
 ![junit_template.png](junit_template.png)
 
 Bereits erstellte Run Configs müssen manuell angepasst werden.
